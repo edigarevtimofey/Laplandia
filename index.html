@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Laplandia 2</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <svg>
+        <symbol id="laplandia" viewbox="0 0 215 20">
+            <g> 
+                <path d="M0 0.00259555H5.17965V15.0196H14.91V19.965H0V0.00259555ZM34.6081 0.00259555L42.8078 19.9766H37.1357L36.0143 17.0573H28.0283L26.9069 19.9766H21.2348L29.4581 0.00259555H34.6081ZM32.0391 6.55357L29.8023 12.4214H34.2521L32.0391 6.55357ZM50.3607 0.00259555H59.3316C60.5373 -0.0262952 61.7363 0.186257 62.8559 0.627336C63.7977 1.00839 64.6454 1.58378 65.3419 2.3147C65.9992 3.02115 66.5002 3.8542 66.8133 4.7611C67.1381 5.70096 67.3006 6.68773 67.2939 7.68043C67.3006 8.69793 67.1382 9.70967 66.8133 10.6757C66.506 11.5921 66.0045 12.4339 65.3419 13.1454C64.6472 13.8798 63.7991 14.4575 62.8559 14.8386C61.7355 15.2769 60.537 15.4894 59.3316 15.4634H55.5819V20H50.3785V0.00259555H50.3607ZM55.5641 4.67352V10.7924H59.029C60.1207 10.7924 60.892 10.5005 61.343 9.9108C61.8113 9.26507 62.0491 8.4849 62.0193 7.69212C62.0193 7.30756 61.9674 6.9247 61.8651 6.55357C61.7649 6.19693 61.5867 5.86614 61.343 5.58435C61.088 5.2916 60.767 5.06165 60.4055 4.91291C59.9673 4.74438 59.4994 4.66301 59.029 4.67352H55.5641ZM75.2622 0.00259555H80.4418V15.0196H90.1841V19.965H75.2562V0.00259555H75.2622ZM109.876 0.00259555L118.07 19.9766H112.398L111.282 17.0573H103.284L102.169 19.9766H96.491L104.714 0.00259555H109.876ZM107.301 6.55357L105.059 12.4214H109.508L107.301 6.55357ZM125.617 19.9825V0.00259555H130.043L139.097 11.1661V0.00259555H144.277V19.9766H139.88L130.826 8.83649V19.9766L125.617 19.9825ZM153.384 0.00843991H162.806C164.231 -0.016443 165.646 0.252039 166.959 0.796662C168.112 1.29154 169.139 2.03125 169.967 2.9628C170.767 3.9004 171.372 4.98356 171.747 6.1507C172.562 8.65714 172.562 11.3513 171.747 13.8577C171.375 15.0228 170.77 16.1028 169.967 17.034C169.137 17.9601 168.11 18.6956 166.959 19.1884C165.646 19.7352 164.232 20.0057 162.806 19.9825H153.378V0.00259555L153.384 0.00843991ZM158.588 4.9713V15.0196H162.414C163.119 15.0337 163.819 14.9086 164.473 14.6518C165.039 14.4162 165.545 14.0615 165.956 13.6125C166.363 13.1497 166.668 12.609 166.852 12.0244C167.062 11.3611 167.164 10.6695 167.155 9.97502C167.22 8.66117 166.798 7.36881 165.968 6.33754C165.519 5.85808 164.966 5.48462 164.349 5.24502C163.733 5.00542 163.069 4.90587 162.408 4.95378L158.588 4.9713ZM185.88 0.00843991V19.9825H180.677V0.00259555L185.88 0.00843991ZM206.8 0.00843991L215 19.9825H209.328L208.207 17.0632H200.197L199.075 19.9825H193.421L201.644 0.00843991H206.8ZM204.225 6.55941L201.989 12.4273H206.438L204.225 6.55941Z" fill="#F8F8F8"/>    
+            </g>
+        </symbol>
+        <symbol id="like" viewbox="0 0 15 15">
+            <g>
+                <path d="M7.5 13.2878L8.19391 12.5838L8.20466 12.5729L8.21604 12.5627C10.1743 10.8052 11.754 9.3683 12.849 8.01677C13.9381 6.67253 14.5 5.46916 14.5 4.18478C14.5 2.09542 12.9171 0.5 10.875 0.5C9.75215 0.5 8.61646 1.03987 7.88397 1.91808L7.5 2.37845L7.11603 1.91808C6.38354 1.03987 5.24785 0.5 4.125 0.5C2.0829 0.5 0.5 2.09542 0.5 4.18478C0.5 5.46916 1.06192 6.67253 2.151 8.01677C3.24597 9.3683 4.82566 10.8052 6.78395 12.5627L6.79534 12.5729L6.80609 12.5838L7.5 13.2878Z" stroke="#F8F8F8"/>
+            </g>
+        </symbol>
+        <symbol id="search" viewbox="0 0 15 15">
+            <g>
+                <path d="M0.555573 0.555555L5.00002 5" stroke="#F8F8F8"/>
+                <circle cx="7.11111" cy="7.11111" r="6.61111" stroke="#F8F8F8"/>
+            </g>
+        </symbol>
+        <symbol id="search__mobile" viewbox="0 0 17 17">
+            <g>
+                <circle cx="6.5" cy="6.5" r="6" stroke="#F8F8F8"/>
+                <path d="M11 11L16 16" stroke="#F8F8F8"/>
+            </g>
+        </symbol>
+        <symbol id="user" viewbox="0 0 17 17">
+            <g>
+                <circle cx="8.5" cy="4.5" r="4" stroke="#F8F8F8"/>
+                <path d="M1 16C2.61238 12.9863 5.36954 11 8.5 11C11.6305 11 14.3876 12.9863 16 16" stroke="#F8F8F8"/>
+            </g>
+        </symbol>
+        <symbol id="shopper" viewbox="0 0 17 17">
+            <g>
+                <path d="M3 7C4.07492 2.32638 5.91303 1 8 1C10.087 1 11.9251 2.32638 13 7" stroke="#F8F8F8"/>
+                <rect x="0.5" y="7.5" width="15" height="9" stroke="#F8F8F8"/>
+            </g>
+        </symbol>
+        <symbol id="liked__mobile" viewBox="0 0 17 17">
+            <g>
+                <path d="M8.5 15.2847L9.33245 14.4331L9.34315 14.4222L9.3545 14.4119C11.5727 12.4044 13.3676 10.7584 14.6127 9.20858C15.8519 7.66625 16.5 6.27486 16.5 4.78261C16.5 2.35231 14.6732 0.5 12.325 0.5C11.0337 0.5 9.72834 1.12549 8.88529 2.14476L8.5 2.61058L8.11471 2.14476C7.27166 1.12549 5.96625 0.5 4.675 0.5C2.32681 0.5 0.5 2.35231 0.5 4.78261C0.5 6.27486 1.14814 7.66625 2.38728 9.20858C3.63243 10.7584 5.42727 12.4044 7.6455 14.4119L7.65685 14.4222L7.66755 14.4331L8.5 15.2847Z" stroke="#F8F8F8"/>       
+            </g>
+        </symbol>  
+    </svg>
+
+
+    <div class="header">
+        <div class="header__inner">
+            <div class="nav__left">
+                <div class="nav__item">
+                    <button class="btn">
+                        <p class="btn__text">Для неё</p>
+                    </button>
+                </div>
+                <div class="nav__item">
+                    <button class="btn">
+                        <p class="btn__text">Для него</p>
+                    </button>
+                </div>
+                <div class="nav__item nav__item--nobord">
+                    <button class="btn">
+                        <p class="btn__text">Коллекции</p>
+                    </button>
+                </div>
+                <div class="nav__item nav__item--nobord">
+                    <button class="btn">
+                        <p class="btn__text">Журнал</p>
+                    </button>
+                </div>
+            </div>
+            <div class="logo">
+                <button class="btn">
+                    <svg class="logo__inner">
+                        <use xlink:href="#laplandia"></use>
+                    </svg> 
+                </button>
+            </div>
+            <div class="nav__left">
+                <div class="nav__item">
+                    <button class="btn btn--short">
+                        <div class="btn__fl">
+                            <svg class="svg__liked">
+                            <use xlink:href="#like"></use>
+                        </svg>
+                        <p class="btn__text">0</p>
+                        </div>
+                        
+                    </button>
+                </div>
+                <div class="nav__item">
+                    <button class="btn btn--short">
+                        <svg class="svg__search">
+                            <use xlink:href="#search"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="nav__item">
+                    <button class="btn">
+                        <p class="btn__text">Мой аккаунт</p>
+                    </button>
+                </div>
+                <div class="nav__item nav__item--nobord">
+                    <button class="btn">
+                        <div class="btn__fl">
+                            <p class="btn__text btn__text--trashbin">Корзина</p>
+                            <p class="btn__text">0</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="header__inner__mobile">
+            <div class="mobile__up">
+                <button class="btn btn--logo">
+                    <svg class="logo__inner">
+                        <use xlink:href="#laplandia"></use>
+                    </svg>
+                </button>     
+            </div>
+            <div class="mobile__down">
+                <div class="mobile__down__frame">
+                    <div class="mobile__down__inner mobile__down__inner--left">
+                        <button class="burger" type="button" id="navtoggle">
+                            <span class="burger__item">Menu</span>
+                        </button>
+                        <button class="btn">
+                            <svg class="mobile__icons">
+                                <use xlink:href="#search__mobile"></use>
+                            </svg>
+                        </button>    
+                    </div>
+                    <div class="mobile__down__inner mobile__down__inner--right">
+                        <button class="btn btn--bordLeft">
+                            <div class="btn__fl">
+                                <svg class="mobile__icons">
+                                    <use xlink:href="#liked__mobile"></use>
+                                </svg>
+                                <p class="btn__text">0</p>
+                            </div>
+                        </button>
+                        <button class="btn btn--bordRight">
+                            <div class="btn__fl">
+                                <svg class="mobile__icons">
+                                    <use xlink:href="#shopper"></use>
+                                </svg>
+                                <p class="btn__text">0</p>
+                            </div>
+                        </button>
+                        <button class="btn">
+                            <svg class="mobile__icons">
+                                <use xlink:href="#user"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="nav__mobile" id="nav__mobile">
+            <div class="nav__mobile__inner">
+                <button class="btn btn--mobileNav">
+                    <p class="btn__text btn__text--mobileNav">Для неё</p>
+                </button>
+                <button class="btn btn--mobileNav">
+                    <p class="btn__text btn__text--mobileNav">Для него</p>
+                </button>
+                <button class="btn btn--mobileNav">
+                    <p class="btn__text btn__text--mobileNav">Коллекции</p>
+                </button>
+                <button class="btn btn--mobileNav">
+                    <p class="btn__text btn__text--mobileNav">Журнал</p>
+                </button>
+            </div>
+        </div>
+    </div>
+   
+    <script src="app.js"></script>    
+</body>
+</html>
